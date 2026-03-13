@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* SIMP Color Palette - Purple/Mauve Theme
+   Primary: #5B3765 (Deep Purple - actions, primary buttons)
+   Secondary: #9E6899 (Purple Mauve - secondary actions)
+   Accent: #BA88AE (Mauve - accents)
+   Muted: #D6A8C4 (Dusty Rose - subtle elements)
+   Light: #F3CCDE (Light Pink - backgrounds)
+*/
+
+:root {
+  --background: #FAF5F8;
+  --foreground: #2D2433;
+  --card: #FFFFFF;
+  --card-foreground: #2D2433;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2433;
+  --primary: #5B3765;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3CCDE;
+  --secondary-foreground: #5B3765;
+  --muted: #F3CCDE;
+  --muted-foreground: #7A5A6E;
+  --accent: #9E6899;
+  --accent-foreground: #FFFFFF;
+  --destructive: #C75F5F;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8D4DE;
+  --input: #F3CCDE;
+  --ring: #BA88AE;
+  --chart-1: #5B3765;
+  --chart-2: #9E6899;
+  --chart-3: #BA88AE;
+  --chart-4: #D6A8C4;
+  --chart-5: #F3CCDE;
+  --radius: 0.625rem;
+  --sidebar: #5B3765;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FFFFFF;
+  --sidebar-primary-foreground: #5B3765;
+  --sidebar-accent: #4A2B52;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #4A2B52;
+  --sidebar-ring: #BA88AE;
+  
+  /* SIMP Custom tokens */
+  --success: #5A8A6E;
+  --success-foreground: #FFFFFF;
+  --warning: #C9A857;
+  --warning-foreground: #3D3520;
+  --info: #5A7A9A;
+  --info-foreground: #FFFFFF;
+  --priority-critical: #C75F5F;
+  --priority-high: #D98F4E;
+  --priority-medium: #C9A857;
+  --priority-low: #5A8A6E;
+}
+
+.dark {
+  --background: #1A141D;
+  --foreground: #F3CCDE;
+  --card: #2D2433;
+  --card-foreground: #F3CCDE;
+  --popover: #2D2433;
+  --popover-foreground: #F3CCDE;
+  --primary: #BA88AE;
+  --primary-foreground: #1A141D;
+  --secondary: #3D2A45;
+  --secondary-foreground: #D6A8C4;
+  --muted: #3D2A45;
+  --muted-foreground: #BA88AE;
+  --accent: #9E6899;
+  --accent-foreground: #FFFFFF;
+  --destructive: #D97373;
+  --destructive-foreground: #1A141D;
+  --border: #3D2A45;
+  --input: #3D2A45;
+  --ring: #9E6899;
+  --chart-1: #BA88AE;
+  --chart-2: #9E6899;
+  --chart-3: #D6A8C4;
+  --chart-4: #5B3765;
+  --chart-5: #F3CCDE;
+  --sidebar: #2D2433;
+  --sidebar-foreground: #F3CCDE;
+  --sidebar-primary: #BA88AE;
+  --sidebar-primary-foreground: #1A141D;
+  --sidebar-accent: #3D2A45;
+  --sidebar-accent-foreground: #F3CCDE;
+  --sidebar-border: #3D2A45;
+  --sidebar-ring: #9E6899;
+  
+  /* SIMP Custom tokens */
+  --success: #6A9A7E;
+  --success-foreground: #1A141D;
+  --warning: #D9B967;
+  --warning-foreground: #1A141D;
+  --info: #6A8AAA;
+  --info-foreground: #1A141D;
+  --priority-critical: #D97373;
+  --priority-high: #E9A05E;
+  --priority-medium: #D9B967;
+  --priority-low: #6A9A7E;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

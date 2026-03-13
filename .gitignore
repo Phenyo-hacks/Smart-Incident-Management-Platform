@@ -1,0 +1,64 @@
+# ===================
+# Node.js / Next.js
+# ===================
+node_modules/
+.next/
+out/
+.env*.local
+.vercel
+
+# ===================
+# Visual Studio / .NET
+# ===================
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS2022 Copilot & Extensions (THE PROBLEM YOU HIT)
+.vs/CopilotIndices/
+.vs/FileContentIndex/
+.vs/ProjectEvaluation/
+*.db
+*.db-shm
+*.db-wal
+
+# Build artifacts
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# NuGet
+packages/
+*.nupkg
+
+# ===================
+# IDE & OS
+# ===================
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===================
+# Secrets & Config
+# ===================
+appsettings.Development.json
+appsettings.Production.json
+secrets.json
+local.settings.json
+*.pfx
+*.p12
+
+# ===================
+# Logs & Temp
+# ===================
+logs/
+*.log
+tmp/
+temp/
