@@ -24,6 +24,7 @@ SIMP/
     └── docs/                    # BACKEND Documentation
         ├── API.md               # REST API specification
         ├── ARCHITECTURE.md      # .NET Clean Architecture
+        ├── AGENTIC-AI.md        # NEW: Semantic Kernel & AI Agents 
         ├── DEPLOYMENT.md        # Azure deployment
         └── DEVELOPMENT.md       # VS2022 setup guide
 ```
@@ -48,6 +49,7 @@ SIMP/
 |----------|----------|---------|
 | Project Overview | [`backend/README.md`](backend/README.md) | Getting started with backend |
 | Architecture Guide | [`backend/docs/ARCHITECTURE.md`](backend/docs/ARCHITECTURE.md) | Clean Architecture, patterns |
+| **Agentic AI Strategy** | [`backend/docs/AGENTIC-AI.md`](backend/docs/AGENTIC-AI.md) | **Semantic Kernel orchestration & Plugins** |
 | API Specification | [`backend/docs/API.md`](backend/docs/API.md) | Endpoint contracts, request/response |
 | Development Guide | [`backend/docs/DEVELOPMENT.md`](backend/docs/DEVELOPMENT.md) | VS2022 setup, coding standards |
 | Deployment | [`backend/docs/DEPLOYMENT.md`](backend/docs/DEPLOYMENT.md) | Azure App Service deployment |
@@ -137,6 +139,12 @@ SIMP/
    - Feature development workflow
    - Testing patterns
    - Debugging tips
+  
+5. **AGENTIC-AI.md** - AI Orchestration Strategy
+   - Semantic Kernel configuration
+   - Native Plugins (C# tools for DB/Logs)
+   - Semantic Plugins (Prompt engineering)
+   - Agentic workflow for Incident Triage and RCA.
 
 ---
 
@@ -146,7 +154,8 @@ SIMP/
 
 1. **Frontend Component**: Start with [`docs/COMPONENTS.md`](docs/COMPONENTS.md)
 2. **API Endpoint**: Reference [`backend/docs/API.md`](backend/docs/API.md)
-3. **Backend Logic**: Follow [`backend/docs/DEVELOPMENT.md`](backend/docs/DEVELOPMENT.md)
+3. **AI Capability**: Check [`backend/docs/AGENTIC-AI.md`](backend/docs/AGENTIC-AI.md)
+4. **Backend Logic**: Follow [`backend/docs/DEVELOPMENT.md`](backend/docs/DEVELOPMENT.md)
 
 ### Deploying Changes
 
@@ -182,4 +191,4 @@ SIMP/
 
 ---
 
-*Last Updated: March 2026*
+*Last Updated: April 2026*
