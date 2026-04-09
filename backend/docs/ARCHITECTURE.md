@@ -77,6 +77,33 @@ Presentation layer exposing REST endpoints.
 - Swagger/OpenAPI generation
 - CORS policies
 
+### AI Orchestration Layer (Semantic Kernel)
+While following Clean Architecture, the AI components are distributed to maintain separation of concerns:
+
+**SIMP.Application/AI:** Contains the "Brain."
+
+IAgentService: The interface for interacting with the Kernel.
+
+Prompts/: Directory of .yaml files defining AI personas (Triage, RCA, etc.).
+
+**SIMP.Infrastructure/AI:** Contains the "Hands."
+
+Plugins/Native/: C# classes decorated with [KernelFunction]. These act as bridges between the AI and your Repositories.
+
+Memory/: Implementation of vector storage using PostgreSQL + pgvector.
+
+### Modified Application Flow:
+**Request:** User sends a chat message.
+
+**Orchestration:** AgentService receives the string.
+
+**Reasoning:** Semantic Kernel uses the Auto-Function Calling to realize it needs data.
+
+**Action:** Kernel calls IncidentPlugin.GetActiveIncidents().
+
+**Response:** Kernel formats the data into a human-friendly answer.
+
+
 ### Shared Layer (SIMP.Shared)
 
 Cross-cutting concerns used by multiple layers.
