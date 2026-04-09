@@ -1,6 +1,6 @@
 # SIMP Implementation Checklist
 
-**Last Updated:** 2024  
+**Last Updated:** April 2026  
 **Status:** In Progress
 
 This document tracks the implementation status of all features defined in the SIMP professional documentation set.
@@ -362,3 +362,39 @@ This document tracks the implementation status of all features defined in the SI
 2. Test all CRUD operations
 3. Verify auth flow
 4. Load test with sample data
+
+---
+
+## 8. Agentic AI (Semantic Kernel) Integration
+
+### 8.1 Infrastructure & Setup
+[ ] Install Microsoft.SemanticKernel & Microsoft.SemanticKernel.Connectors.OpenAI
+
+[ ] Configure Secret Management (Key Vault/User Secrets) for API Keys
+
+[ ] Register Kernel in Program.cs Dependency Injection
+
+[ ] Setup pgvector extension in PostgreSQL
+
+### 8.2 Native Plugins (The Tools)
+[ ] IncidentPlugin: Methods for CRUD operations the AI can call
+
+[ ] UserPlugin: Tools for looking up agent availability/skills
+
+[ ] LogPlugin: Bridge to infrastructure logs for RCA tasks
+
+[ ] SearchPlugin: Semantic search over past "Resolved" incidents
+
+### 8.3 Semantic Plugins (The Personas)
+[ ] Triage Template: Prompt for classifying incoming text
+
+[ ] RCA Template: Prompt for analyzing logs and history
+
+[ ] Report Template: Prompt for generating post-mortem docs
+
+### 8.4 API Endpoints
+[ ] POST /api/agent/triage: Endpoint for the AI to "clean" a new ticket
+
+[ ] POST /api/agent/chat: General assistant endpoint for the UI sidebar
+
+[ ] POST /api/agent/analyze/{id}: Manual trigger for the RCA agent
