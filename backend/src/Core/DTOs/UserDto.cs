@@ -1,6 +1,6 @@
 using SIMP.Core.Enums;
 
-namespace SIMP.Shared.DTOs;
+namespace SIMP.Core.DTOs;
 
 /// <summary>
 /// User data transfer object

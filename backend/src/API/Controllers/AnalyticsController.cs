@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SIMP.Core.Interfaces;
-using SIMP.Shared.DTOs;
+using SIMP.Core.DTOs;
 
 namespace SIMP.API.Controllers;
 
@@ -33,8 +33,8 @@ public class AnalyticsController : BaseApiController
     public async Task<ActionResult<ApiResponse<DashboardSummary>>> GetDashboard(CancellationToken cancellationToken = default)
     {
         var stats = await _incidentService.GetStatisticsAsync(
-            DateTime.UtcNow.AddDays(-30), 
-            DateTime.UtcNow, 
+            DateTime.UtcNow.AddDays(-30),
+            DateTime.UtcNow,
             cancellationToken);
 
         var summary = new DashboardSummary
@@ -97,7 +97,7 @@ public class AnalyticsController : BaseApiController
         CancellationToken cancellationToken = default)
     {
         var agents = await _unitOfWork.Users.GetActiveAgentsAsync(cancellationToken);
-        
+
         // TODO: Implement actual performance metrics calculation
         var performance = agents.Select(a => new AgentPerformance
         {
@@ -118,7 +118,7 @@ public class AnalyticsController : BaseApiController
     /// </summary>
     [HttpGet("trends")]
     [ProducesResponseType(typeof(ApiResponse<IReadOnlyList<TrendDataPoint>>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<ApiResponse<IReadOnlyList<TrendDataPoint>>>> GetTrends(
+    public ActionResult<ApiResponse<IReadOnlyList<TrendDataPoint>>> GetTrends(  
         [FromQuery] string period = "daily",
         [FromQuery] int days = 30,
         CancellationToken cancellationToken = default)
@@ -142,7 +142,7 @@ public class AnalyticsController : BaseApiController
     }
 }
 
-// Analytics DTOs
+// Analytics DTOs (consider moving to SIMP.Core.DTOs later)
 public class DashboardSummary
 {
     public int TotalIncidents { get; set; }

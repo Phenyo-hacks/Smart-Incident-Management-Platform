@@ -1,6 +1,6 @@
 using SIMP.Core.Entities;
 using SIMP.Core.Enums;
-using SIMP.Shared.DTOs;
+using SIMP.Core.DTOs;
 
 namespace SIMP.Core.Interfaces;
 

@@ -1,6 +1,6 @@
 using System.Net;
 using System.Text.Json;
-using SIMP.Shared.DTOs;
+using SIMP.Core.DTOs;
 
 namespace SIMP.API.Middleware;
 

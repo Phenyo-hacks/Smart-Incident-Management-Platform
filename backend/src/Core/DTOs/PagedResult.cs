@@ -1,4 +1,4 @@
-namespace SIMP.Shared.DTOs;
+namespace SIMP.Core.DTOs;
 
 /// <summary>
 /// Generic paged result wrapper

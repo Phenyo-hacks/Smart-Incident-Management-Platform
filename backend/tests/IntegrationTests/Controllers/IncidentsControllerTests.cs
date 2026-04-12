@@ -2,7 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
-using SIMP.Shared.DTOs;
+using SIMP.Core.DTOs;
 using Xunit;
 
 namespace SIMP.IntegrationTests.Controllers;

@@ -1,6 +1,6 @@
 using SIMP.Core.Enums;
 
-namespace SIMP.Shared.DTOs;
+namespace SIMP.Core.DTOs;
 
 /// <summary>
 /// Incident data transfer object

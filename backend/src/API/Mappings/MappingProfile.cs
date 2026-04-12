@@ -1,6 +1,6 @@
 using AutoMapper;
 using SIMP.Core.Entities;
-using SIMP.Shared.DTOs;
+using SIMP.Core.DTOs;
 
 namespace SIMP.API.Mappings;
 

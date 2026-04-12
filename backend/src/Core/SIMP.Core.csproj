@@ -14,4 +14,8 @@
     <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!--  <ProjectReference Include="..\Shared\SIMP.Shared.csproj" />    -->
+  </ItemGroup>
+
 </Project>

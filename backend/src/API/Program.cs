@@ -84,9 +84,9 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
-// Health checks
+/* Health checks
 builder.Services.AddHealthChecks()
-    .AddDbContextCheck<AppDbContext>();
+    .AddDbContextCheck<AppDbContext>(); */
 
 // CORS
 builder.Services.AddCors(options =>
@@ -131,3 +131,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.Run();
+
+public partial class Program { }

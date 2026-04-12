@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SIMP.Core.Enums;
 using SIMP.Core.Interfaces;
-using SIMP.Shared.DTOs;
+using SIMP.Core.DTOs;
 
 namespace SIMP.API.Controllers;
 
